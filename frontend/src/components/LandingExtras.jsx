@@ -103,7 +103,7 @@ export function CommunitySection() {
     <section className={s.section} id="testimonials">
       <div className={s.sectionHeading}>
         <div><span className={s.eyebrow}>COMMUNITY TESTIMONIALS</span><h2>Your experience.<br />Our next chapter.</h2></div>
-        <p>Perspectives from the Valthera community.</p>
+        <p>Perspectives from the Grave Stone Assets community.</p>
       </div>
       <div className={s.testimonialLayout}>
         <div className={s.testimonialIntro}>

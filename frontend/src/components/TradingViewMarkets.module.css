@@ -1,13 +1,13 @@
 .markets {
   color-scheme: dark;
-  --tv-widget-accent-color: #b3f6aa;
+  --tv-widget-accent-color: #d3a875;
   --tv-widget-text-color: #eef2ec;
   --tv-widget-background-color: transparent;
   --tv-widget-font-family: "DM Sans", sans-serif;
   --tv-widget-price-text-color: #eef2ec;
-  --tv-widget-positive-color: #b3f6aa;
-  --tv-widget-positive-area-top-color: #b3f6aa30;
-  --tv-widget-positive-area-bottom-color: #b3f6aa02;
+  --tv-widget-positive-color: #d3a875;
+  --tv-widget-positive-area-top-color: #d3a87530;
+  --tv-widget-positive-area-bottom-color: #d3a87502;
   --tv-widget-negative-color: #f29288;
   --tv-widget-negative-area-top-color: #f2928825;
   --tv-widget-negative-area-bottom-color: #f2928802;

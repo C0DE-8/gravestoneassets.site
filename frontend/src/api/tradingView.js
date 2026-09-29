@@ -44,7 +44,7 @@ export function mountTradingView(
     locale: "en",
     dateRange: "1D",
     colorTheme: "dark",
-    trendLineColor: "#b3f6aa",
+    trendLineColor: "#d3a875",
     underLineColor: "rgba(179,246,170,0.18)",
     underLineBottomColor: "rgba(179,246,170,0)",
     isTransparent: false,

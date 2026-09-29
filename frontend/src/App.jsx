@@ -30,35 +30,35 @@ function RouteEffects() {
     window.scrollTo(0, 0);
     const pages = {
       "/": [
-        "A little vision. A bigger future.",
-        "Explore digital assets, thoughtfully designed investment plans, and a clearer view of your financial future.",
+        "Grave Stone Assets | Digital assets, clearly managed",
+        "Explore digital assets, track your portfolio, and manage your account with Grave Stone Assets.",
       ],
-      "/login": ["Sign in", "Sign in to your Valthera Investments portfolio."],
+      "/login": ["Sign in", "Sign in to your Grave Stone Assets account."],
       "/register": [
         "Create your account",
-        "Start your Valthera Investments journey with a clear view of your portfolio.",
+        "Create a Grave Stone Assets account to manage your digital asset portfolio.",
       ],
     };
     const fallback =
       pathname.split("/").filter(Boolean).pop()?.replaceAll("-", " ") ||
-      "Valthera Investments";
+      "Grave Stone Assets";
     const [label, description] = pages[pathname] || [
       fallback,
-      "Manage your Valthera Investments portfolio, digital assets, and investment plans in one place.",
+      "Manage your Grave Stone Assets portfolio, digital assets, and account in one place.",
     ];
-    document.title = `${label} | Valthera Investments`;
+    document.title = pathname === "/" ? label : `${label} | Grave Stone Assets`;
     document
       .querySelector('meta[name="description"]')
       ?.setAttribute("content", description);
     document
       .querySelector('meta[property="og:title"]')
-      ?.setAttribute("content", `${label} | Valthera Investments`);
+      ?.setAttribute("content", pathname === "/" ? label : `${label} | Grave Stone Assets`);
     document
       .querySelector('meta[property="og:description"]')
       ?.setAttribute("content", description);
     document
       .querySelector('meta[name="twitter:title"]')
-      ?.setAttribute("content", `${label} | Valthera Investments`);
+      ?.setAttribute("content", pathname === "/" ? label : `${label} | Grave Stone Assets`);
     document
       .querySelector('meta[name="twitter:description"]')
       ?.setAttribute("content", description);

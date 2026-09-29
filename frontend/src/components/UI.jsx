@@ -1,18 +1,15 @@
 import { useId } from "react";
-import { FiArrowUpRight, FiAlertCircle, FiArrowRight } from "react-icons/fi";
+import { FiAlertCircle, FiArrowRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import CustomSelect from "./CustomSelect";
 import s from "./UI.module.css";
 export function Brand() {
   return (
-    <Link to="/" className={s.brand} aria-label="Valthera Investments home">
-      <span className={s.mark}>
-        <FiArrowUpRight />
-      </span>
+    <Link to="/" className={s.brand} aria-label="Grave Stone Assets home">
+      <span className={s.mark} aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M7 26V12a9 9 0 0 1 18 0v14H7Z"/><path d="M16 9v9M12.5 13.5h7M11 26v-3h10v3"/></svg></span>
       <span className={s.wordmark}>
-        Valthera<span className={s.light}>Investments</span>
+        Grave Stone<span className={s.light}>Assets</span>
       </span>
-      <span className={s.dot}>®</span>
     </Link>
   );
 }

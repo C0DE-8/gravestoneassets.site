@@ -25,5 +25,5 @@ export default function AssetIcon({ asset, size = 36, className = "" }) {
   if (symbol === "AVAX") return <svg {...common}><circle cx="20" cy="20" r="19" fill="#e84142"/><path d="M20 7.5c1.2 0 2 .7 2.6 1.8l9.1 16.1c.7 1.2.1 2.6-1.3 2.6h-5.2c-1.2 0-2-.6-2.6-1.7l-1.9-3.5c-.5-.9-.5-2 0-2.9l2.8-5-1.4-2.5-8 14c-.6 1-1.4 1.6-2.6 1.6H8.8c-1.4 0-2-1.4-1.3-2.6l9.9-16.1C18 8.2 18.8 7.5 20 7.5Z" fill="#fff"/><circle cx="28.6" cy="29.5" r="2.5" fill="#fff"/></svg>;
   if (symbol === "LINK") return <svg {...common}><circle cx="20" cy="20" r="19" fill="#f5f7fb"/><path d="m20 6 12.1 7v14L20 34 7.9 27V13L20 6Zm0 5.8-7.1 4.1v8.2l7.1 4.1 7.1-4.1v-8.2L20 11.8Z" fill="#2a5ada"/></svg>;
   if (symbol === "BTC") return <svg {...common}><circle cx="20" cy="20" r="19" fill="#f7931a"/><text x="20" y="27" textAnchor="middle" fontSize="23" fontWeight="700" fill="#fff">₿</text></svg>;
-  return <svg {...common}><circle cx="20" cy="20" r="19" fill="#253029"/><text x="20" y="25" textAnchor="middle" fontSize="14" fontWeight="700" fill="#b3f6aa">{symbol.slice(0, 2)}</text></svg>;
+  return <svg {...common}><circle cx="20" cy="20" r="19" fill="#30271e"/><text x="20" y="25" textAnchor="middle" fontSize="14" fontWeight="700" fill="#d3a875">{symbol.slice(0, 2)}</text></svg>;
 }

@@ -14,11 +14,11 @@ export default function Policy() {
       </header>
       <article>
         <span className={s.eyebrow}>
-          VALTHERA INVESTMENTS · LAST UPDATED SEPTEMBER 2026
+          GRAVE STONE ASSETS · LAST UPDATED SEPTEMBER 2026
         </span>
         <h1>Terms, risk &amp; investment policy.</h1>
         <p className={s.lead}>
-          Valthera gives you a clearer way to explore markets and manage your
+          Grave Stone Assets gives you a clearer way to explore markets and manage your
           own decisions. It is not a promise of wealth, a deposit account, or
           personal financial advice.
         </p>
@@ -31,8 +31,8 @@ export default function Policy() {
             money you need for living expenses, debt, or emergencies.
           </p>
         </div>
-        <Section title="1. What Valthera provides">
-          Valthera Investments provides software for viewing market information,
+        <Section title="1. What Grave Stone Assets provides">
+          Grave Stone Assets provides software for viewing market information,
           recording user-directed investment activity, and exploring digital
           asset strategies. Market data can be delayed, interrupted, or wrong.
           Practice trading features use test funds and do not place exchange

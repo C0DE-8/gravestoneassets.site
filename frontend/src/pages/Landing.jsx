@@ -46,7 +46,7 @@ export default function Landing() {
           <Brand />
           <nav className={menu ? s.open : ""}>
             <a href="#possibilities" onClick={() => setMenu(false)}>
-              Why Valthera
+              Why Grave Stone Assets
             </a>
             <a href="#markets" onClick={() => setMenu(false)}>
               Explore markets
@@ -349,11 +349,11 @@ export default function Landing() {
             <div>
               {[
                 [
-                  "What can I do with Valthera Investments?",
+                  "What can I do with Grave Stone Assets?",
                   "Manage your account, explore investment plans, follow copy traders, place supported trades, and track deposit and withdrawal requests from your dashboard.",
                 ],
                 [
-                  "Can I mine crypto on Valthera today?",
+                  "Can I mine crypto on Grave Stone Assets today?",
                   "Mining equipment levels, hourly credits, batteries, and account controls are available in the mining workspace. Configure and manage the service from the admin workspace.",
                 ],
                 [
@@ -370,7 +370,7 @@ export default function Landing() {
                 ],
                 [
                   "Is this a self-custody Web3 wallet?",
-                  "No. Valthera Investments is an account-based investment platform. The dashboard uses the platform’s balances and deposit addresses; it does not connect to or control a self-custody wallet.",
+                  "No. Grave Stone Assets is an account-based platform. The dashboard uses the platform’s balances and deposit addresses; it does not connect to or control a self-custody wallet.",
                 ],
               ].map(([q, a]) => (
                 <details key={q}>
@@ -416,7 +416,7 @@ export default function Landing() {
           </p>
           <div className={s.copyright}>
             <span>
-              © {new Date().getFullYear()} Valthera Investments. All rights
+              © {new Date().getFullYear()} Grave Stone Assets. All rights
               reserved.
             </span>
             <span>

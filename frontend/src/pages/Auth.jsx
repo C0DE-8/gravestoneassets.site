@@ -185,7 +185,7 @@ export default function Auth({ register = false }) {
           <p className={s.switch}>
             {register
               ? "Already have an account?"
-              : "New to Valthera Investments?"}{" "}
+              : "New to Grave Stone Assets?"}{" "}
             <Link to={register ? "/login" : "/register"}>
               {register ? "Sign in" : "Create an account"}
             </Link>
