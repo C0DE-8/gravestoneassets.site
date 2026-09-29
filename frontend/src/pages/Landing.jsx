@@ -16,8 +16,13 @@ import {
   FiUserCheck,
   FiClock,
   FiFileText,
+  FiImage,
 } from "react-icons/fi";
 import { SiBitcoin, SiEthereum } from "react-icons/si";
+import nftGuideImage from "../assets/nft/nft.png";
+import nftArtImage from "../assets/nft/art-nfts.png";
+import nftMusicImage from "../assets/nft/music-nft.png";
+import nftProfileImage from "../assets/nft/peps.png";
 import { Brand, Button, ArrowLink } from "../components/UI";
 import s from "./Landing.module.css";
 import HeroMarketCard from "../components/HeroMarketCard";
@@ -31,6 +36,14 @@ export default function Landing() {
   const [menu, setMenu] = useState(false);
   const [motionPaused, setMotionPaused] = useState(false);
   const [ready, setReady] = useState(false);
+  const [activeNft, setActiveNft] = useState(0);
+  const nftItems = [
+    { title: "Digital collectibles", image: nftGuideImage, collection: "NFTs at a glance", description: "NFTs can represent digital art, music, collectibles, and more. Learn how token ownership works and what it does—and does not—include." },
+    { title: "Art NFTs", image: nftArtImage, collection: "A common NFT format", description: "A token can be associated with digital artwork. The artwork may be stored separately, and token ownership does not automatically grant copyright." },
+    { title: "Music NFTs", image: nftMusicImage, collection: "A common NFT format", description: "Music NFTs may connect to tracks, releases, or collectible editions. The creator’s terms explain what the holder receives." },
+    { title: "Profile NFTs", image: nftProfileImage, collection: "A common NFT format", description: "Character collections are sometimes used as collectibles or profile images. Rights and utility vary by project." },
+  ];
+  const nft = nftItems[activeNft];
   return (
     <>
       {!ready && <SitePreloader onReady={setReady} />}
@@ -45,9 +58,10 @@ export default function Landing() {
         <header className={s.header}>
           <Brand />
           <nav className={menu ? s.open : ""}>
-            <a href="#possibilities" onClick={() => setMenu(false)}>
-              Why Grave Stone Assets
+          <a href="#possibilities" onClick={() => setMenu(false)}>
+              About
             </a>
+            <Link to="/nft-101" onClick={() => setMenu(false)}>NFT 101</Link>
             <a href="#markets" onClick={() => setMenu(false)}>
               Explore markets
             </a>
@@ -55,6 +69,7 @@ export default function Landing() {
               How it works
             </a>
             <a href="#mining" onClick={() => setMenu(false)}>Mining</a>
+            <a href="#nft" onClick={() => setMenu(false)}>NFTs</a>
             <a href="#news" onClick={() => setMenu(false)}>News</a>
             <a href="#faq" onClick={() => setMenu(false)}>
               FAQs
@@ -155,6 +170,28 @@ export default function Landing() {
             </div>
           </section>
           <CoinTicker />
+          <section className={`${s.section} ${s.about}`} id="about">
+            <div className={s.aboutCopy}>
+              <span className={s.eyebrow}>ABOUT GRAVE STONE ASSETS</span>
+              <h2>One place for investing, mining, and digital collectibles.</h2>
+              <p>
+                Grave Stone Assets brings portfolio tools and digital asset
+                features together in one account. Explore available investment
+                plans, manage mining equipment, and follow the development of
+                our NFT collection experience from one clear workspace.
+              </p>
+              <p className={s.aboutNote}>
+                Digital assets can be volatile and may lose value. Review the
+                details and risks before taking part.
+              </p>
+              <Button to="/register">Explore the platform <FiArrowUpRight /></Button>
+            </div>
+            <div className={s.aboutPillars}>
+              <article><span>01</span><FiLayers /><div><h3>Investment tools</h3><p>Review available plans, terms, and portfolio activity in your account.</p></div></article>
+              <article><span>02</span><FiActivity /><div><h3>Managed mining</h3><p>Choose equipment and follow its runtime and mining credits.</p></div></article>
+              <article><span>03</span><FiImage /><div><h3>NFT collection</h3><p>Get a first look at our upcoming digital collectible experience.</p></div></article>
+            </div>
+          </section>
           <section className={`${s.section} ${s.confidence}`}>
             <div className={s.sectionHeading}>
               <div>
@@ -296,6 +333,30 @@ export default function Landing() {
           </section>
           <BitcoinNews />
           <MiningSection />
+          <section className={`${s.section} ${s.nftSection}`} id="nft">
+            <div className={s.sectionHeading}>
+              <div><span className={s.eyebrow}>NFT 101 · LEARN AS YOU BROWSE</span><h2>A first look at NFTs.</h2></div>
+              <p>Explore digital art, music, and collectibles.<br />Learn what token ownership means.</p>
+            </div>
+            <article className={s.nftCard}>
+              <div className={s.nftArtwork}>
+                <img src={nft.image} alt={`${nft.title} example`} />
+                <span className={s.nftEdition}>NFT 101 · {String(activeNft + 1).padStart(2, "0")}</span>
+              </div>
+              <div className={s.nftInfo}>
+                <span className={s.eyebrow}>NFT 101 · EXPLORE THE BASICS</span>
+                <h3 aria-live="polite">{nft.title}</h3>
+                <p>{nft.description}</p>
+                <dl><div><dt>Collection</dt><dd>{nft.collection}</dd></div></dl>
+                <div className={s.nftControls}>
+                  <span aria-live="polite">{String(activeNft + 1).padStart(2, "0")} <i>/</i> {String(nftItems.length).padStart(2, "0")}</span>
+                  <button type="button" onClick={() => setActiveNft((activeNft - 1 + nftItems.length) % nftItems.length)} aria-label="Previous NFT preview">←</button>
+                  <button type="button" onClick={() => setActiveNft((activeNft + 1) % nftItems.length)} aria-label="Next NFT preview"><FiArrowRight /></button>
+                </div>
+                <Button to="/nft-101" secondary>What are NFTs? <FiArrowUpRight /></Button>
+              </div>
+            </article>
+          </section>
           <CoinTicker compact />
           <CommunitySection />
           <section className={`${s.section} ${s.steps}`} id="how-it-works">

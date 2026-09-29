@@ -335,11 +335,41 @@ h2 {
   color: var(--muted);
   margin-bottom: 4px;
 }
+.about { display:grid; grid-template-columns:1.05fr 1fr; gap:70px; align-items:center; }
+.aboutCopy h2 { max-width:570px; font-size:clamp(34px,4vw,48px); }
+.aboutCopy > p { max-width:560px; color:var(--muted); font-size:13px; line-height:1.9; }
+.aboutCopy .aboutNote { margin:20px 0 24px; font-size:10px; }
+.aboutPillars { display:grid; gap:12px; }
+.aboutPillars article { display:grid; grid-template-columns:30px 30px 1fr; align-items:start; gap:13px; padding:20px; border:1px solid var(--line); border-radius:11px; background:linear-gradient(130deg,#1d1b17,#141412); }
+.aboutPillars article > span { color:var(--muted); font-size:9px; letter-spacing:1px; }
+.aboutPillars article > svg { color:var(--mint); font-size:19px; }
+.aboutPillars h3 { margin:0 0 6px; font-size:14px; font-weight:550; }
+.aboutPillars p { margin:0; color:var(--muted); font-size:11px; line-height:1.7; }
 .features {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
 }
+.nftSection { padding-bottom:15px; }
+.nftCard { display:grid; grid-template-columns:1fr 1fr; overflow:hidden; border:1px solid #d3a87535; border-radius:15px; background:linear-gradient(120deg,#211d17,#151512); }
+.nftArtwork { min-height:355px; position:relative; display:grid; place-items:center; overflow:hidden; background:#181714; }
+.nftArtwork img { width:100%; height:100%; min-height:355px; position:absolute; inset:0; object-fit:cover; transition:opacity .2s ease; }
+.nftArtwork::after { content:""; position:absolute; inset:45% 0 0; background:linear-gradient(transparent,#11110f9c); pointer-events:none; }
+.nftEdition { position:absolute; left:24px; bottom:20px; color:#c9b69c; font-size:8px; letter-spacing:1.8px; }
+.nftInfo { padding:42px; align-self:center; }
+.nftInfo h3 { margin:13px 0; font-size:30px; font-weight:500; letter-spacing:-1px; }
+.nftInfo > p { max-width:440px; color:var(--muted); font-size:12px; line-height:1.9; }
+.nftInfo dl { display:grid; gap:0; margin:24px 0; border-block:1px solid var(--line); }
+.nftInfo dl > div { display:flex; justify-content:space-between; gap:14px; padding:11px 0; border-bottom:1px solid var(--line); font-size:10px; }
+.nftInfo dl > div:last-child { border:0; }
+.nftInfo dt { color:var(--muted); }
+.nftInfo dd { margin:0; color:var(--text); text-align:right; }
+.nftControls { display:flex; align-items:center; gap:8px; margin:0 0 24px; }
+.nftControls > span { margin-right:auto; color:var(--muted); font-size:10px; font-variant-numeric:tabular-nums; }
+.nftControls > span i { padding:0 5px; color:#6f685d; font-style:normal; }
+.nftControls button { width:36px; height:36px; display:grid; place-items:center; border:1px solid #d3a87548; border-radius:50%; background:#d3a8750a; color:var(--mint); font-size:15px; }
+.nftControls button:hover { background:#d3a87520; }
+.nftControls button:focus-visible { outline:2px solid var(--mint); outline-offset:3px; }
 .features article {
   border: 1px solid var(--line);
   border-radius: 13px;
@@ -612,6 +642,8 @@ h2 {
   }
 }
 @media (max-width: 1000px) {
+  .about { grid-template-columns:1fr; gap:30px; }
+  .nftInfo { padding:32px; }
   .header nav {
     gap: 16px;
   }
@@ -642,6 +674,10 @@ h2 {
   }
 }
 @media (max-width: 760px) {
+  .aboutPillars article { grid-template-columns:24px 24px 1fr; gap:10px; padding:16px; }
+  .nftCard { grid-template-columns:1fr; }
+  .nftArtwork { min-height:300px; }
+  .nftInfo { padding:26px; }
   .header {
     padding: 20px;
   }
