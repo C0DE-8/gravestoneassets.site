@@ -50,7 +50,7 @@ const { chromium, expect } = require("@playwright/test");
       ))
     )
       throw Error("Trading mobile overflow");
-    await page.goto("http://127.0.0.1:5173/admin/login");
+    await page.goto("http://127.0.0.1:5173/admin/auth");
     await page.getByLabel("Admin email").fill("admin@valthera.test");
     await page
       .getByLabel("Admin password", { exact: true })

@@ -86,7 +86,7 @@ export default function AppLayout({ preview = false, admin = false }) {
               className={s.logout}
               onClick={() => {
                 (admin ? adminSession : session).clear();
-                navigate(admin ? "/admin/login" : "/login");
+                navigate(admin ? "/admin/auth" : "/login");
               }}
             >
               <FiLogOut /> Log out

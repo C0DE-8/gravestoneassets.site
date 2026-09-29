@@ -33,7 +33,7 @@ For automatic API reload during development, use `npm run dev` instead of `npm s
 | Investor | tester@valthera.test | ValtheraTest2026! |
 | Admin    | admin@valthera.test  | ValtheraTest2026! |
 
-The investor starts with **10,000 USD of local test balance** and withdrawal PIN **123456**. Sign in to the admin workspace at http://localhost:5173/admin/login. It includes investor trading controls, deposit/withdrawal/KYC reviews, and paginated activity logs. Admin and investor sessions are separate. Seeds also include sample plans, a local demo copy trader, a notification, and a deliberately invalid BTC deposit address marked `LOCAL-TEST-ONLY`. Use a sample image for deposit proof. Do not send real funds.
+The investor starts with **10,000 USD of local test balance** and withdrawal PIN **123456**. Sign in to the admin workspace at http://localhost:5173/admin/auth. It includes investor trading controls, deposit/withdrawal/KYC reviews, and paginated activity logs. Admin and investor sessions are separate. Seeds also include sample plans, a local demo copy trader, a notification, and a deliberately invalid BTC deposit address marked `LOCAL-TEST-ONLY`. Use a sample image for deposit proof. Do not send real funds.
 
 Seeding is restricted to development, localhost, and the `valthera_local` database. Rerunning it preserves existing passwords, balances, and account activity. Set `LOCAL_TEST_PASSWORD` before the first seed to use a different test password.
 

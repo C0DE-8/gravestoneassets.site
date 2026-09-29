@@ -77,7 +77,7 @@ function RouteEffects() {
   }, [pathname]);
   useEffect(() => {
     const expire = () => navigate("/login", { replace: true });
-    const adminExpire = () => navigate("/admin/login", { replace: true });
+    const adminExpire = () => navigate("/admin/auth", { replace: true });
     window.addEventListener("session-expired", expire);
     window.addEventListener("admin-session-expired", adminExpire);
     return () => {
@@ -94,7 +94,7 @@ function ProtectedAdmin() {
   return adminSession.get() ? (
     <AppLayout admin />
   ) : (
-    <Navigate to="/admin/login" replace />
+    <Navigate to="/admin/auth" replace />
   );
 }
 export default function App() {
@@ -121,7 +121,7 @@ export default function App() {
           <Route path="copy-trading" element={<CopyTrading />} />
           <Route path="settings" element={<Settings />} />
         </Route>
-        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin/auth" element={<AdminLogin />} />
         <Route path="/admin" element={<ProtectedAdmin />}>
           <Route
             index
