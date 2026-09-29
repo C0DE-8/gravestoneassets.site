@@ -24,6 +24,7 @@ import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 import Policy from "./pages/Policy";
 import NftGuide from "./pages/NftGuide";
+import About from "./pages/About";
 function RouteEffects() {
   const { pathname } = useLocation();
   const navigate = useNavigate();
@@ -42,6 +43,10 @@ function RouteEffects() {
       "/nft-101": [
         "NFT 101: What are NFTs?",
         "Learn what NFTs are, how digital ownership works, and what to check before buying. Watch our beginner video and explore art, music, and profile NFT examples.",
+      ],
+      "/about": [
+        "About Grave Stone Assets",
+        "Learn about Grave Stone Assets investing plans, AI assisted mining tools, trading features, copy trading, and digital asset education.",
       ],
     };
     const fallback =
@@ -100,6 +105,7 @@ export default function App() {
         <Route path="/register" element={<Auth key="register" register />} />
         <Route path="/terms" element={<Policy />} />
         <Route path="/nft-101" element={<NftGuide />} />
+        <Route path="/about" element={<About />} />
         <Route path="/preview" element={<AppLayout preview />}>
           <Route index element={<Dashboard preview />} />
         </Route>

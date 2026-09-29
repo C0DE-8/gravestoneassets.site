@@ -18,7 +18,7 @@ export default function NftGuide() {
     <main className={s.page}>
       <header className={s.header}>
         <Brand />
-        <Link to="/"><FiArrowLeft /> Back to Grave Stone Assets</Link>
+        <nav className={s.headerActions}><Link to="/about">About Grave Stone Assets <FiArrowUpRight /></Link><Link to="/"><FiArrowLeft /> Back home</Link></nav>
       </header>
       <section className={s.hero}>
         <div className={s.heroCopy}>
@@ -59,7 +59,7 @@ export default function NftGuide() {
         <div><span className={s.eyebrow}>BEFORE YOU BUY</span><h2>Pause and check the details.</h2><ul><li><FiCheckCircle /> Verify the collection and creator from their official channels.</li><li><FiCheckCircle /> Read the item description, rights, fees, and marketplace terms.</li><li><FiCheckCircle /> Check the wallet address and network before sending anything.</li><li><FiCheckCircle /> Be wary of unsolicited links, fake support, and promises of guaranteed value.</li></ul></div>
       </section>
 
-      <section className={s.footerCta}><span className={s.eyebrow}>KEEP EXPLORING</span><h2>See the Grave Stone Assets NFT preview.</h2><p>Visit the homepage to browse the digital collectible concept cards.</p><Button to="/#nft">View NFT preview <FiArrowUpRight /></Button></section>
+      <section className={s.footerCta}><span className={s.eyebrow}>KEEP EXPLORING</span><h2>Learn about Grave Stone Assets.</h2><p>Find out how our investment tools, mining workspace, trading features, and copy trading fit together.</p><div className={s.footerActions}><Button to="/about">About Grave Stone Assets <FiArrowUpRight /></Button><Button to="/#nft" secondary>View NFT preview <FiImage /></Button></div></section>
       <footer className={s.footer}><Brand /><p>NFTs can be volatile and may lose value. This guide is educational and is not investment advice.</p><Link to="/terms">Terms &amp; investment policy <FiArrowUpRight /></Link></footer>
     </main>
   );
