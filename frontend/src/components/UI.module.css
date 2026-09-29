@@ -124,7 +124,7 @@
   position: absolute;
   inset: 0;
   transform: translateX(-100%);
-  background: linear-gradient(90deg, transparent, #b3f6aa0a, transparent);
+  background: linear-gradient(90deg, transparent, #d3a8750a, transparent);
   animation: skeletonSweep 1.5s ease-in-out infinite;
 }
 .skeletonTop {

@@ -43,7 +43,7 @@
 }
 .card {
   min-width: 0;
-  border: 1px solid #b3f6aa18;
+  border: 1px solid #d3a87518;
   border-radius: 13px;
   background: linear-gradient(140deg, #1a251b80, #111813);
   transition:
@@ -51,9 +51,9 @@
     transform 0.3s,
     box-shadow 0.3s;
 }
-.card:focus-within { border-color: #b3f6aa65; }
+.card:focus-within { border-color: #d3a87565; }
 @media (hover: hover) and (pointer: fine) {
-  .card:hover { border-color: #b3f6aa60; transform: translateY(-4px); box-shadow: 0 16px 32px #0004; }
+  .card:hover { border-color: #d3a87560; transform: translateY(-4px); box-shadow: 0 16px 32px #0004; }
 }
 @media (prefers-reduced-motion: reduce) {
   .card { transition: none; }
@@ -68,12 +68,12 @@
 .index {
   height: 35px;
   width: 35px;
-  border: 1px solid #b3f6aa20;
+  border: 1px solid #d3a87520;
   border-radius: 9px;
   display: grid;
   place-items: center;
   color: var(--mint);
-  background: #b3f6aa08;
+  background: #d3a87508;
   font-size: 11px;
 }
 .card h3 {
@@ -111,7 +111,7 @@
   padding: 20px;
   color: var(--muted);
   font-size: 12px;
-  background: radial-gradient(ellipse, #b3f6aa08, transparent 70%);
+  background: radial-gradient(ellipse, #d3a87508, transparent 70%);
 }
 .placeholder > svg {
   color: var(--mint);
@@ -153,9 +153,9 @@
   display: flex;
   align-items: center;
   gap: 7px;
-  border: 1px solid #b3f6aa25;
+  border: 1px solid #d3a87525;
   border-radius: 7px;
-  background: #b3f6aa08;
+  background: #d3a87508;
   padding: 10px 12px;
   color: var(--mint);
   font-size: 11px;

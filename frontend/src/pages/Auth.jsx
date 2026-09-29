@@ -37,8 +37,8 @@ export default function Auth({ register = false }) {
         <div>
           <span>YOUR NEXT CHAPTER</span>
           <h1>
-            A little vision.
-            <br />A bigger <em>future.</em>
+            Grave Stone.
+            <br />Digital assets, <em>clearly.</em>
           </h1>
           <p>
             One space for your investments.

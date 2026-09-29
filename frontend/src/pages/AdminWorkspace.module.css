@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  border: 1px solid #b3f6aa25;
-  background: #b3f6aa07;
+  border: 1px solid #d3a87525;
+  background: #d3a87507;
   border-radius: 12px;
   padding: 23px;
   margin-bottom: 25px;
@@ -94,8 +94,8 @@
   height: 38px;
   border-radius: 10px;
   color: var(--mint);
-  background: #b3f6aa0d;
-  border: 1px solid #b3f6aa25;
+  background: #d3a8750d;
+  border: 1px solid #d3a87525;
 }
 .profileForm { display: grid; gap: 18px; }
 .walletLayout {
@@ -269,8 +269,8 @@
 }
 .tabs .active {
   color: var(--mint);
-  border-color: #b3f6aa30;
-  background: #b3f6aa0c;
+  border-color: #d3a87530;
+  background: #d3a8750c;
 }
 .pagination {
   display: flex;

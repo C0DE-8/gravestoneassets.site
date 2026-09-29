@@ -5,12 +5,12 @@
   margin: 20px 0 28px;
   padding: 0 0 12px;
   scrollbar-width: thin;
-  scrollbar-color: #b3f6aa55 #111714;
+  scrollbar-color: #d3a87555 #111714;
   scroll-snap-type: x proximity;
 }
 .viewport::-webkit-scrollbar { height: 7px; }
 .viewport::-webkit-scrollbar-track { background:#111714; border-radius:10px; }
-.viewport::-webkit-scrollbar-thumb { background:#b3f6aa55; border-radius:10px; }
+.viewport::-webkit-scrollbar-thumb { background:#d3a87555; border-radius:10px; }
 .grid {
   display: flex;
   gap: 12px;

@@ -32,11 +32,11 @@
 }
 .trigger:hover,
 .open .trigger {
-  border-color: #b3f6aa55;
+  border-color: #d3a87555;
   background: #141c18;
 }
 .open .trigger {
-  box-shadow: 0 0 0 3px #b3f6aa0b;
+  box-shadow: 0 0 0 3px #d3a8750b;
 }
 .invalid .trigger {
   border-color: #f2928870;
@@ -61,7 +61,7 @@
   max-height: 300px;
   overflow: hidden;
   padding: 6px;
-  border: 1px solid #b3f6aa26;
+  border: 1px solid #d3a87526;
   border-radius: 10px;
   background: #111814;
   box-shadow: 0 18px 45px #0009;
@@ -114,7 +114,7 @@
 }
 .option.active,
 .option:hover {
-  background: #b3f6aa0d;
+  background: #d3a8750d;
   color: var(--text);
 }
 .option[aria-selected="true"] {

@@ -124,8 +124,8 @@ export function Chart({ small = false }) {
     >
       <defs>
         <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
-          <stop stopColor="#b3f6aa" stopOpacity=".22" />
-          <stop offset="1" stopColor="#b3f6aa" stopOpacity="0" />
+          <stop stopColor="#d3a875" stopOpacity=".22" />
+          <stop offset="1" stopColor="#d3a875" stopOpacity="0" />
         </linearGradient>
       </defs>
       {!small &&
@@ -144,7 +144,7 @@ export function Chart({ small = false }) {
       <path
         d="M0 164 L20 157 L36 167 L56 139 L72 148 L89 130 L107 135 L125 115 L140 125 L160 121 L179 143 L199 117 L216 110 L236 121 L251 89 L270 102 L293 88 L310 96 L330 64 L350 74 L372 60 L390 77 L409 53 L430 65 L449 35 L468 43 L490 31 L512 51 L530 22 L550 32 L570 16 L600 7"
         fill="none"
-        stroke="#b3f6aa"
+        stroke="#d3a875"
         strokeWidth="2.5"
       />
     </svg>

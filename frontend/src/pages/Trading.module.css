@@ -2,8 +2,8 @@
   font-size: 8px;
   color: var(--mint);
   letter-spacing: 1px;
-  border: 1px solid #b3f6aa25;
-  background: #b3f6aa08;
+  border: 1px solid #d3a87525;
+  background: #d3a87508;
   border-radius: 20px;
   padding: 9px 12px;
   white-space: nowrap;
@@ -90,8 +90,8 @@
 }
 .direction .up {
   color: var(--mint);
-  border-color: #b3f6aa50;
-  background: #b3f6aa10;
+  border-color: #d3a87550;
+  background: #d3a87510;
 }
 .direction .down {
   color: #f29288;
@@ -112,8 +112,8 @@
   color: var(--muted);
 }
 .durations .selected {
-  background: #b3f6aa0a;
-  border-color: #b3f6aa40;
+  background: #d3a8750a;
+  border-color: #d3a87540;
   color: var(--mint);
 }
 .terms {

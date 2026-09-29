@@ -71,8 +71,8 @@ export default function AppLayout({ preview = false, admin = false }) {
           <div>
             <FiArrowUpRight />
             <h3>
-              A little vision.
-              <br />A bigger future.
+              Grave Stone Assets.
+              <br />Your portfolio, clearly.
             </h3>
             <p>Your next chapter is yours.</p>
           </div>

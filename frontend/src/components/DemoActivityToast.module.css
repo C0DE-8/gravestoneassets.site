@@ -10,7 +10,7 @@
   padding: 14px;
   color: #edf6ed;
   background: linear-gradient(135deg, #18251cfa, #0d1510fa);
-  border: 1px solid #b3f6aa35;
+  border: 1px solid #d3a87535;
   border-radius: 12px;
   box-shadow: 0 18px 45px #0009;
   backdrop-filter: blur(12px);
@@ -34,8 +34,8 @@
   flex: 0 0 38px;
   border-radius: 50%;
   color: var(--mint);
-  background: #b3f6aa0d;
-  border: 1px solid #b3f6aa28;
+  background: #d3a8750d;
+  border: 1px solid #d3a87528;
 }
 
 .copy { min-width: 0; }

@@ -91,8 +91,8 @@ export default function Landing() {
                 YOUR FUTURE. MORE POSSIBILITIES.
               </div>
               <h1>
-                A little vision.
-                <br />A bigger <span>future.</span>
+                Grave Stone.
+                <br />Digital assets, <span>clearly.</span>
               </h1>
               <p>
                 Follow Bitcoin and crypto markets, explore trading and investment
@@ -395,7 +395,7 @@ export default function Landing() {
             <Button to="/register">
               Create your account <FiArrowUpRight />
             </Button>
-            <p>A little vision can go a long way.</p>
+            <p>Grave Stone Assets. Your portfolio, in perspective.</p>
           </section>
         </main>
         <footer className={s.footer}>
