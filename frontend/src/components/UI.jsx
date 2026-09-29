@@ -1,5 +1,5 @@
 import { useId } from "react";
-import { FiAlertCircle, FiArrowRight } from "react-icons/fi";
+import { FiAlertCircle, FiArrowRight, FiArrowUpRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import CustomSelect from "./CustomSelect";
 import s from "./UI.module.css";

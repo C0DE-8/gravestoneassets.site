@@ -25,6 +25,8 @@ import NotFound from "./pages/NotFound";
 import Policy from "./pages/Policy";
 import NftGuide from "./pages/NftGuide";
 import About from "./pages/About";
+import Nfts from "./pages/Nfts";
+import AdminNfts from "./pages/AdminNfts";
 function RouteEffects() {
   const { pathname } = useLocation();
   const navigate = useNavigate();
@@ -113,6 +115,7 @@ export default function App() {
           <Route index element={<Dashboard />} />
           <Route path="investments" element={<Investments />} />
           <Route path="mining" element={<Mining />} />
+          <Route path="nfts" element={<Nfts />} />
           <Route path="wallet" element={<Wallet />} />
           <Route path="trading" element={<Trading />} />
           <Route path="copy-trading" element={<CopyTrading />} />
@@ -131,6 +134,7 @@ export default function App() {
           <Route path="plans" element={<AdminWorkspace key="plans" section="plans" />} />
           <Route path="investments" element={<AdminWorkspace key="investments" section="investments" />} />
           <Route path="mining" element={<AdminWorkspace key="mining" section="mining" />} />
+          <Route path="nfts" element={<AdminNfts />} />
           <Route
             path="wallet-addresses"
             element={<AdminWorkspace key="wallet-addresses" section="wallet-addresses" />}

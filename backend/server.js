@@ -8,6 +8,7 @@ const path = require("path");
 const adminAuthRoutes = require("./routes/admin.auth.routes");
 const userRoutes = require("./routes/user.routes");
 const db = require("./db");
+const { adminRouter: adminNftRoutes, userRouter: userNftRoutes } = require("./routes/nft.routes");
 
 const app = express();
 
@@ -242,6 +243,8 @@ app.get(["/health", "/api/health", "/api/debug/health"], async (req, res) => {
 /* =========================================================
    ✅ ROUTES
    ========================================================= */
+app.use("/api/admin/nfts", require("./middleware/adminAudit"), adminNftRoutes);
+app.use("/api/users/nfts", userNftRoutes);
 app.use("/api/admin", require("./middleware/adminAudit"), require("./routes/admin.workspace.routes"), adminAuthRoutes);
 const miningRoutes = require("./routes/mining.routes");
 const conversionRoutes = require("./routes/conversion.routes");
