@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.3
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Sep 05, 2026 at 04:20 AM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Host: localhost:3306
+-- Generation Time: Sep 29, 2026 at 07:11 AM
+-- Server version: 11.4.13-MariaDB-cll-lve
+-- PHP Version: 8.4.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `valthera_local`
+-- Database: `valtfdmq_valtherainvestments`
 --
 
 -- --------------------------------------------------------
@@ -64,7 +64,7 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`id`, `name`, `email`, `password_hash`, `created_at`, `updated_at`) VALUES
-(1, 'Local Test Admin', 'admin@valthera.test', '$2b$12$w023m4aWZOs14l1eeQwolOIIy1uTxUtf6QAs9xIYRXQ4PFotpm2jy', '2026-09-05 01:23:53', '2026-09-05 01:23:53');
+(1, 'Admin', 'admin@valtherainvestments.com', '$2b$12$6cPS1/MPHaaIgBeX7JQSR.KXaqlQ8SimXDkVnLPRnNl6n/NTfbZ3y', '2026-09-05 01:23:53', '2026-09-05 13:00:40');
 
 -- --------------------------------------------------------
 
@@ -95,7 +95,65 @@ INSERT INTO `admin_audit_logs` (`id`, `admin_id`, `admin_email`, `method`, `reso
 (6, 1, 'admin@valthera.test', 'POST', '/deposits/2/approve', 200, '2026-09-05 02:06:51'),
 (7, 1, 'admin@valthera.test', 'POST', '/deposits/2/approve', 400, '2026-09-05 02:06:51'),
 (8, NULL, NULL, 'POST', '/login', 401, '2026-09-05 02:15:25'),
-(9, 1, 'admin@valthera.test', 'POST', '/login', 200, '2026-09-05 02:15:40');
+(9, 1, 'admin@valthera.test', 'POST', '/login', 200, '2026-09-05 02:15:40'),
+(10, 1, 'admin@valthera.test', 'POST', '/login', 200, '2026-09-05 12:41:51'),
+(11, 1, 'admin@valthera.test', 'PATCH', '/profile', 200, '2026-09-05 13:00:00'),
+(12, 1, 'admin@valtherainvestments.com', 'PATCH', '/profile', 200, '2026-09-05 13:00:07'),
+(13, 1, 'admin@valtherainvestments.com', 'PATCH', '/profile', 200, '2026-09-05 13:00:40'),
+(14, 1, 'admin@valtherainvestments.com', 'POST', '/login', 200, '2026-09-05 15:36:39'),
+(15, 1, 'admin@valtherainvestments.com', 'PUT', '/wallet-addresses/1', 200, '2026-09-05 15:38:41'),
+(16, 1, 'admin@valtherainvestments.com', 'POST', '/wallet-addresses', 200, '2026-09-05 15:39:54'),
+(17, 1, 'admin@valtherainvestments.com', 'POST', '/login', 200, '2026-09-22 17:13:38'),
+(18, 1, 'admin@valtherainvestments.com', 'POST', '/users/10/balance-adjustments', 500, '2026-09-22 17:15:12'),
+(19, 1, 'admin@valtherainvestments.com', 'POST', '/users/10/balance-adjustments', 500, '2026-09-22 17:15:22'),
+(20, 1, 'admin@valtherainvestments.com', 'POST', '/users/10/balance-adjustments', 500, '2026-09-22 17:22:42'),
+(21, 1, 'admin@valtherainvestments.com', 'POST', '/login', 200, '2026-09-22 17:38:48'),
+(22, 1, 'admin@valtherainvestments.com', 'PATCH', '/users/10/trading-settings', 200, '2026-09-22 17:54:45'),
+(23, 1, 'admin@valtherainvestments.com', 'POST', '/users/10/balance-adjustments', 200, '2026-09-22 17:55:47'),
+(24, 1, 'admin@valtherainvestments.com', 'POST', '/users/10/balance-adjustments', 200, '2026-09-22 17:56:36'),
+(25, 1, 'admin@valtherainvestments.com', 'POST', '/users/10/balance-adjustments', 200, '2026-09-22 17:57:21'),
+(26, 1, 'admin@valtherainvestments.com', 'POST', '/login', 200, '2026-09-23 11:34:06'),
+(27, 1, 'admin@valtherainvestments.com', 'PATCH', '/withdrawal-pin-settings', 200, '2026-09-23 11:36:52'),
+(28, 1, 'admin@valtherainvestments.com', 'POST', '/login', 200, '2026-09-24 11:55:55'),
+(29, 1, 'admin@valtherainvestments.com', 'POST', '/investments', 400, '2026-09-24 13:00:45'),
+(30, 1, 'admin@valtherainvestments.com', 'POST', '/investments', 201, '2026-09-24 13:00:52'),
+(31, 1, 'admin@valtherainvestments.com', 'POST', '/users/11/balance-adjustments', 200, '2026-09-24 13:01:49'),
+(32, 1, 'admin@valtherainvestments.com', 'POST', '/users/11/balance-adjustments', 200, '2026-09-24 13:02:10'),
+(33, 1, 'admin@valtherainvestments.com', 'POST', '/login', 200, '2026-09-24 13:37:36'),
+(34, 1, 'admin@valtherainvestments.com', 'POST', '/users/12/balance-adjustments', 200, '2026-09-24 13:39:05'),
+(35, 1, 'admin@valtherainvestments.com', 'POST', '/login', 200, '2026-09-24 14:07:31'),
+(36, 1, 'admin@valtherainvestments.com', 'POST', '/deposits/4/approve', 200, '2026-09-24 14:09:19'),
+(37, 1, 'admin@valtherainvestments.com', 'POST', '/login', 200, '2026-09-28 16:32:48');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `balance_adjustments`
+--
+
+CREATE TABLE `balance_adjustments` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` int(10) UNSIGNED NOT NULL,
+  `admin_id` int(10) UNSIGNED NOT NULL,
+  `balance_key` varchar(32) NOT NULL,
+  `amount` decimal(28,8) NOT NULL,
+  `before_balance` decimal(28,8) NOT NULL,
+  `after_balance` decimal(28,8) NOT NULL,
+  `reason` varchar(250) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `balance_adjustments`
+--
+
+INSERT INTO `balance_adjustments` (`id`, `user_id`, `admin_id`, `balance_key`, `amount`, `before_balance`, `after_balance`, `reason`, `created_at`) VALUES
+(1, 10, 1, 'profit_balance', 500000.00000000, 0.00000000, 500000.00000000, 'Trade profit', '2026-09-22 17:55:47'),
+(2, 10, 1, 'main_balance', 10000.00000000, 0.00000000, 10000.00000000, 'balance', '2026-09-22 17:56:36'),
+(3, 10, 1, 'investment_balance', 200000.00000000, 0.00000000, 200000.00000000, 'overall investment log', '2026-09-22 17:57:21'),
+(4, 11, 1, 'BTC', 1.00000000, 0.00000000, 1.00000000, 'overall investment log', '2026-09-24 13:01:49'),
+(5, 11, 1, 'main_balance', 15000.00000000, 0.00000000, 15000.00000000, 'investment', '2026-09-24 13:02:10'),
+(6, 12, 1, 'BTC', 500.00000000, 0.00000000, 500.00000000, 'credit', '2026-09-24 13:39:05');
 
 -- --------------------------------------------------------
 
@@ -149,6 +207,32 @@ INSERT INTO `copy_traders` (`id`, `trader_name`, `image_filename`, `specialty`, 
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `crypto_conversions`
+--
+
+CREATE TABLE `crypto_conversions` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` int(10) UNSIGNED NOT NULL,
+  `direction` enum('buy','sell') NOT NULL,
+  `asset` varchar(16) NOT NULL,
+  `source_amount` decimal(28,8) NOT NULL,
+  `received_amount` decimal(28,8) NOT NULL,
+  `price_usd` decimal(28,8) NOT NULL,
+  `price_source` varchar(50) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `crypto_conversions`
+--
+
+INSERT INTO `crypto_conversions` (`id`, `user_id`, `direction`, `asset`, `source_amount`, `received_amount`, `price_usd`, `price_source`, `created_at`) VALUES
+(1, 12, 'sell', 'BTC', 1.00000000, 84260.94000000, 84260.94000000, 'Binance', '2026-09-24 14:10:11'),
+(2, 12, 'sell', 'BTC', 1.00000000, 84258.01000000, 84258.01000000, 'Binance', '2026-09-24 14:10:34');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `deposits`
 --
 
@@ -167,6 +251,13 @@ CREATE TABLE `deposits` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `deposits`
+--
+
+INSERT INTO `deposits` (`id`, `user_id`, `asset`, `amount`, `status`, `admin_note`, `proof_filename`, `approved_by`, `approved_at`, `declined_by`, `declined_at`, `created_at`, `updated_at`) VALUES
+(4, 12, 'BTC', 500.00, 'approved', NULL, 'deposit_1790256984529_81856ef11e762.jpg', 1, '2026-09-24 10:09:19', NULL, NULL, '2026-09-24 13:36:24', '2026-09-24 14:09:19');
 
 -- --------------------------------------------------------
 
@@ -236,6 +327,54 @@ INSERT INTO `investment_plans` (`id`, `name`, `description`, `roi_percent`, `acc
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `mining_levels`
+--
+
+CREATE TABLE `mining_levels` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `description` varchar(500) DEFAULT NULL,
+  `power_watts` int(10) UNSIGNED NOT NULL,
+  `price` decimal(24,2) NOT NULL,
+  `hourly_earning` decimal(24,4) NOT NULL,
+  `battery_hours` int(10) UNSIGNED NOT NULL,
+  `battery_price` decimal(24,2) NOT NULL,
+  `is_active` tinyint(1) NOT NULL DEFAULT 1,
+  `sort_order` tinyint(3) UNSIGNED NOT NULL DEFAULT 1,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `mining_levels`
+--
+
+INSERT INTO `mining_levels` (`id`, `name`, `description`, `power_watts`, `price`, `hourly_earning`, `battery_hours`, `battery_price`, `is_active`, `sort_order`, `created_at`, `updated_at`) VALUES
+(1, 'Starter Miner', 'Entry equipment for learning the mining workspace.', 100, 25.00, 0.0100, 12, 2.00, 1, 1, '2026-09-24 11:56:25', '2026-09-24 11:56:25'),
+(2, 'Growth Miner', 'Mid-tier equipment with higher wattage and hourly accrual.', 500, 100.00, 0.0500, 24, 8.00, 1, 2, '2026-09-24 11:56:25', '2026-09-24 11:56:25'),
+(3, 'Pro Miner', 'High-power equipment with the highest hourly accrual.', 1000, 250.00, 0.1000, 48, 20.00, 1, 3, '2026-09-24 11:56:25', '2026-09-24 11:56:25');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mining_transactions`
+--
+
+CREATE TABLE `mining_transactions` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` int(10) UNSIGNED NOT NULL,
+  `miner_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `type` enum('equipment_purchase','battery_purchase','earning','transfer') NOT NULL,
+  `amount` decimal(24,4) NOT NULL,
+  `mining_balance_after` decimal(24,2) NOT NULL,
+  `account_balance_key` enum('main_balance','profit_balance','investment_balance') DEFAULT NULL,
+  `note` varchar(500) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `notifications`
 --
 
@@ -257,6 +396,27 @@ CREATE TABLE `notifications` (
 
 INSERT INTO `notifications` (`id`, `user_id`, `type`, `title`, `message`, `is_read`, `expires_at`, `created_by`, `created_at`) VALUES
 (1, 1, 'notification', 'Local testing account', 'This local account contains test funds only. No real funds or deposits are required.', 0, NULL, NULL, '2026-09-05 01:23:53');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `platform_settings`
+--
+
+CREATE TABLE `platform_settings` (
+  `setting_key` varchar(100) NOT NULL,
+  `setting_value` text NOT NULL,
+  `updated_by` int(10) UNSIGNED DEFAULT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `platform_settings`
+--
+
+INSERT INTO `platform_settings` (`setting_key`, `setting_value`, `updated_by`, `updated_at`) VALUES
+('withdrawal_pin_fee', '890.00', 1, '2026-09-23 11:36:52'),
+('withdrawal_pin_message', 'Contact your account manager to receive your withdrawal PIN.', 1, '2026-09-23 11:36:52');
 
 -- --------------------------------------------------------
 
@@ -318,15 +478,22 @@ CREATE TABLE `users` (
   `trading_status` varchar(30) NOT NULL DEFAULT 'active',
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `copied_trader_id` int(10) UNSIGNED DEFAULT NULL
+  `copied_trader_id` int(10) UNSIGNED DEFAULT NULL,
+  `mining_balance` decimal(24,2) NOT NULL DEFAULT 0.00
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `full_name`, `username`, `address`, `city`, `zipcode`, `country`, `phone`, `email`, `password_hash`, `role`, `is_verified`, `main_balance`, `profit_balance`, `investment_balance`, `withdraw_hold`, `pin_hash`, `account_type`, `trade_progress`, `signal_strength`, `account_status`, `copy_trading_status`, `trading_status`, `created_at`, `updated_at`, `copied_trader_id`) VALUES
-(1, 'Local Test Investor', 'tester', '1 Test Street', 'Test City', NULL, 'United States', '0000000000', 'tester@valthera.test', '$2b$12$w023m4aWZOs14l1eeQwolOIIy1uTxUtf6QAs9xIYRXQ4PFotpm2jy', 'user', 1, 10000.00, 0.00, 0.00, 100.00, '123456', 'individual', 0.00, 0.00, 'active', 'inactive', 'active', '2026-09-05 01:23:53', '2026-09-05 01:54:47', NULL);
+INSERT INTO `users` (`id`, `full_name`, `username`, `address`, `city`, `zipcode`, `country`, `phone`, `email`, `password_hash`, `role`, `is_verified`, `main_balance`, `profit_balance`, `investment_balance`, `currency_symbol`, `withdraw_hold`, `pin_hash`, `account_type`, `trade_progress`, `signal_strength`, `account_status`, `copy_trading_status`, `trading_status`, `created_at`, `updated_at`, `copied_trader_id`, `mining_balance`) VALUES
+(1, 'Local Test Investor', 'tester', '1 Test Street', 'Test City', NULL, 'United States', '0000000000', 'tester@valtherainvestments.com', '$2b$12$cIdDnfN7ed3qZ.lduqB2BukjzOGHlRDscnngM67bFAIfOrcpa3/Ui', 'user', 1, 10000.00, 0.00, 0.00, '$', 100.00, '123456', 'individual', 0.00, 0.00, 'active', 'inactive', 'active', '2026-09-05 01:23:53', '2026-09-05 13:03:45', NULL, 0.00),
+(7, 'David Panama', 'davidpanama001', '1st street', 'Austin Texas', NULL, 'United States', '+12254851458', 'ka3915186@gmail.com', '$2b$12$V9uNVY12EQgIAyk6wxdWMeDnigVURzSuWCNHBMZYPSv/gmjn2pSaq', 'user', 0, 0.00, 0.00, 0.00, '$', 0.00, NULL, 'individual', 0.00, 0.00, 'active', 'inactive', 'active', '2026-09-06 15:15:57', '2026-09-06 15:15:57', NULL, 0.00),
+(8, 'Evelyn oghenechovwe', 'evelynoghenechovwe493@gmail.com', 'No.9 emmalane opposite alegbo road', 'Delta State', NULL, 'Nigeria', '08147500915', 'evelynoghenechovwe493@gmail.com', '$2b$12$yvZwUYmMeh9K/Uy5Vjc1xOpsOuedtxsHysh8LFmnsxyUhaPZY4Ecm', 'user', 0, 0.00, 0.00, 0.00, '$', 0.00, NULL, 'individual', 0.00, 0.00, 'active', 'inactive', 'active', '2026-09-06 18:29:56', '2026-09-06 18:29:56', NULL, 0.00),
+(9, 'Splej Cruz', 'splejcruz@gmail.com', 'No. 9 emmalane', 'Delta', NULL, 'Nigeria', '09035318525', 'splejcruz@gmail.com', '$2b$12$hr1BCX8WWEq.BIX6vpRxx.2tteJMUPXdSzB.Z3H6KgVmeXZj02AgK', 'user', 0, 0.00, 0.00, 0.00, '$', 0.00, NULL, 'individual', 0.00, 0.00, 'active', 'inactive', 'active', '2026-09-06 18:47:22', '2026-09-06 18:47:22', NULL, 0.00),
+(10, 'Samantha Hawkins', 'Samantha110', '24 Willow Crescent', 'Manchester', 'M1 1AA', 'United Kingdom', '07700 900456', 'samhawkins1973@yahoo.co.uk', '$2b$12$ZPA/4.TycXXpdrKLvl4xFOZzbaiIX4fRSJtx1GafxXCnmYztxBarK', 'user', 0, 10000.00, 500000.00, 200000.00, '£', 0.00, NULL, 'individual', 90.00, 61.00, 'active', 'inactive', 'active', '2026-09-22 14:01:07', '2026-09-22 17:57:21', NULL, 0.00),
+(11, 'habibi', 'habibi', 'Pti road', 'Warri', '332211', 'Nigeria', '07065785436', '8amlight@gmail.com', '$2b$12$sgIDt8pDM6dXHriJN7snreEhrdWRfhwbyEqX6dQ2X3mZoHAkcfuAa', 'user', 0, 15000.00, 0.00, 250.00, '$', 0.00, NULL, 'individual', 0.00, 0.00, 'active', 'inactive', 'active', '2026-09-23 02:07:57', '2026-09-24 13:02:10', NULL, 0.00),
+(12, 'billions', 'billions', '2402 Belmont Blvd', 'Delaware, US', '332211', 'usa', '+2347065785436', 'billions@gmail.com', '$2b$12$ZVK0DNwvV6fNhf4d4OsfiOw1EDcGUYB43IKkM1Icbqqvne5mV83h2', 'user', 0, 169018.95, 0.00, 0.00, '$', 0.00, NULL, 'individual', 0.00, 0.00, 'active', 'inactive', 'active', '2026-09-24 13:03:53', '2026-09-24 14:10:34', NULL, 0.00);
 
 -- --------------------------------------------------------
 
@@ -341,6 +508,14 @@ CREATE TABLE `user_crypto_balances` (
   `balance` decimal(28,8) NOT NULL DEFAULT 0.00000000,
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `user_crypto_balances`
+--
+
+INSERT INTO `user_crypto_balances` (`id`, `user_id`, `asset`, `balance`, `updated_at`) VALUES
+(1, 11, 'BTC', 1.00000000, '2026-09-24 13:01:49'),
+(2, 12, 'BTC', 498.00000000, '2026-09-24 14:10:34');
 
 -- --------------------------------------------------------
 
@@ -368,6 +543,13 @@ CREATE TABLE `user_investments` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `user_investments`
+--
+
+INSERT INTO `user_investments` (`id`, `user_id`, `plan_id`, `amount`, `roi_percent`, `expected_profit`, `expected_total`, `duration_days`, `actual_profit_loss`, `final_total`, `status`, `started_at`, `ends_at`, `completed_at`, `admin_note`, `settled_by`, `created_at`, `updated_at`) VALUES
+(4, 11, 1, 250.00, 8.50, 21.25, 271.25, 7, 0.00, 0.00, 'active', '2026-09-24 09:00:52', '2026-10-01 09:00:52', NULL, 'Added by administrator', NULL, '2026-09-24 13:00:52', '2026-09-24 13:00:52');
 
 -- --------------------------------------------------------
 
@@ -398,6 +580,25 @@ CREATE TABLE `user_kyc` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `user_miners`
+--
+
+CREATE TABLE `user_miners` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` int(10) UNSIGNED NOT NULL,
+  `level_id` int(10) UNSIGNED NOT NULL,
+  `status` enum('stopped','running','depleted') NOT NULL DEFAULT 'stopped',
+  `battery_seconds_remaining` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `last_accrued_at` datetime DEFAULT NULL,
+  `started_at` datetime DEFAULT NULL,
+  `stopped_at` datetime DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `wallet_addresses`
 --
 
@@ -415,7 +616,8 @@ CREATE TABLE `wallet_addresses` (
 --
 
 INSERT INTO `wallet_addresses` (`id`, `asset`, `address`, `qr_filename`, `created_at`, `updated_at`) VALUES
-(1, 'BTC', 'LOCAL-TEST-ONLY-NO-BLOCKCHAIN-ADDRESS', NULL, '2026-09-05 01:29:13', '2026-09-05 01:29:13');
+(1, 'BTC', 'bc1qh3jps9377rmgtv68sxgm3m5uq7aclwgw83jh88', 'qr_1788622721008_38d5633fa23988.jpeg', '2026-09-05 01:29:13', '2026-09-05 15:38:41'),
+(3, 'ETH', '0x62B66B0417b69a9aa108eD8458a58820507f23E2', 'qr_1788622794418_dbda8694a5797.jpeg', '2026-09-05 15:39:54', '2026-09-05 15:39:54');
 
 -- --------------------------------------------------------
 
@@ -479,6 +681,13 @@ ALTER TABLE `admin_audit_logs`
   ADD KEY `audit_admin_created` (`admin_id`,`created_at`);
 
 --
+-- Indexes for table `balance_adjustments`
+--
+ALTER TABLE `balance_adjustments`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `balance_adjustments_user_id_id_idx` (`user_id`,`id`);
+
+--
 -- Indexes for table `binary_trades`
 --
 ALTER TABLE `binary_trades`
@@ -491,6 +700,13 @@ ALTER TABLE `binary_trades`
 --
 ALTER TABLE `copy_traders`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `crypto_conversions`
+--
+ALTER TABLE `crypto_conversions`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `crypto_conversions_user_idx` (`user_id`,`id`);
 
 --
 -- Indexes for table `deposits`
@@ -522,11 +738,33 @@ ALTER TABLE `investment_plans`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `mining_levels`
+--
+ALTER TABLE `mining_levels`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `mining_levels_name_uq` (`name`),
+  ADD KEY `mining_levels_active_idx` (`is_active`,`sort_order`);
+
+--
+-- Indexes for table `mining_transactions`
+--
+ALTER TABLE `mining_transactions`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `mining_transactions_user_idx` (`user_id`,`id`),
+  ADD KEY `mining_transactions_miner_idx` (`miner_id`,`id`);
+
+--
 -- Indexes for table `notifications`
 --
 ALTER TABLE `notifications`
   ADD PRIMARY KEY (`id`),
   ADD KEY `notifications_user_idx` (`user_id`);
+
+--
+-- Indexes for table `platform_settings`
+--
+ALTER TABLE `platform_settings`
+  ADD PRIMARY KEY (`setting_key`);
 
 --
 -- Indexes for table `trades`
@@ -566,6 +804,15 @@ ALTER TABLE `user_kyc`
   ADD UNIQUE KEY `user_kyc_user_unique` (`user_id`);
 
 --
+-- Indexes for table `user_miners`
+--
+ALTER TABLE `user_miners`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_miners_user_idx` (`user_id`,`id`),
+  ADD KEY `user_miners_status_idx` (`status`,`last_accrued_at`),
+  ADD KEY `user_miners_level_fk` (`level_id`);
+
+--
 -- Indexes for table `wallet_addresses`
 --
 ALTER TABLE `wallet_addresses`
@@ -600,7 +847,13 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `admin_audit_logs`
 --
 ALTER TABLE `admin_audit_logs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+
+--
+-- AUTO_INCREMENT for table `balance_adjustments`
+--
+ALTER TABLE `balance_adjustments`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `binary_trades`
@@ -615,10 +868,16 @@ ALTER TABLE `copy_traders`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `crypto_conversions`
+--
+ALTER TABLE `crypto_conversions`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `deposits`
 --
 ALTER TABLE `deposits`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `email_logs`
@@ -639,6 +898,18 @@ ALTER TABLE `investment_plans`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT for table `mining_levels`
+--
+ALTER TABLE `mining_levels`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `mining_transactions`
+--
+ALTER TABLE `mining_transactions`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `notifications`
 --
 ALTER TABLE `notifications`
@@ -654,19 +925,19 @@ ALTER TABLE `trades`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `user_crypto_balances`
 --
 ALTER TABLE `user_crypto_balances`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `user_investments`
 --
 ALTER TABLE `user_investments`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `user_kyc`
@@ -675,16 +946,46 @@ ALTER TABLE `user_kyc`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `user_miners`
+--
+ALTER TABLE `user_miners`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `wallet_addresses`
 --
 ALTER TABLE `wallet_addresses`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `withdrawals`
 --
 ALTER TABLE `withdrawals`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `crypto_conversions`
+--
+ALTER TABLE `crypto_conversions`
+  ADD CONSTRAINT `crypto_conversions_user_fk` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `mining_transactions`
+--
+ALTER TABLE `mining_transactions`
+  ADD CONSTRAINT `mining_transactions_miner_fk` FOREIGN KEY (`miner_id`) REFERENCES `user_miners` (`id`) ON DELETE SET NULL,
+  ADD CONSTRAINT `mining_transactions_user_fk` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `user_miners`
+--
+ALTER TABLE `user_miners`
+  ADD CONSTRAINT `user_miners_level_fk` FOREIGN KEY (`level_id`) REFERENCES `mining_levels` (`id`),
+  ADD CONSTRAINT `user_miners_user_fk` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
